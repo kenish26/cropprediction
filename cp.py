@@ -54,7 +54,7 @@ crops=['wheat','mungbean','Tea','millet','maize','lentil','jute','cofee','cotton
 cr='rice'
 
 #Predicting the crop
-predictions = clf.predict([[23,34,56,78]])
+predictions = clf.predict(X_test)
 count=0
 for i in range(0,30):
     if(predictions[0][i]==1):
