@@ -25,10 +25,7 @@ test=data.iloc[: ,4:].values
 #Dividing the data into training and test set
 X_train,X_test,y_train,y_test=train_test_split(train,test,test_size=0.3)
 
-from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
-X_train = sc.fit_transform(X_train)
-X_test = sc.transform(X_test)
+
 
 #Importing Decision Tree classifier
 from sklearn.tree import DecisionTreeRegressor
@@ -50,8 +47,7 @@ print("The accuracy of this model is: ", a*100)
 
 
 # Putting the names of crop in a single list
-crops=['wheat','mungbean','Tea','millet','maize','lentil','jute','cofee','cotton','ground nut','peas','rubber','sugarcane','tobacco','kidney beans','moth beans','coconut','blackgram','adzuki beans','pigeon peas','chick peas','banana','grapes','apple','mango','muskmelon','orange','papaya','watermelon','pomegranate']
-cr='rice'
+crops=['Black gram', 'Chickpea', 'Coconut', 'Coffee', 'Cotton', 'Ground Nut', 'Jute', 'Kidney Beans', 'Lentil', 'Moth Beans', 'Mung Bean', 'Peas', 'Pigeon Peas', 'Rubber', 'Sugarcane', 'Tea', 'Tobacco', 'apple', 'banana', 'grapes', 'maize', 'mango', 'millet', 'muskmelon', 'orange', 'papaya', 'pomegranate', 'rice', 'watermelon', 'wheat']
 
 #Predicting the crop
 predictions = clf.predict(X_test)
